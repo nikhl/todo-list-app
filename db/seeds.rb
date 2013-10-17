@@ -1,0 +1,5 @@
+Item.create(name: "Submit Todo list task for MavenLink", completed: false)
+Item.create(name: "play with Marionette", completed: false)
+Item.create(name: "Attend interview", completed: true)
+Item.create(name: "Talk with Andrew", completed: true)
+Item.create(name: "Submit Todo list task for MavenLink", completed: true)

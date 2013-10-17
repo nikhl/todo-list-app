@@ -1,0 +1,55 @@
+@mixin round-borders($border-color, $border-radius, $thickness) {
+  border: $thickness solid $border-color;
+  border-radius: $border-radius;
+}
+@mixin font-styles {
+  font-family: $verdana;
+  padding: 6px;
+}
+
+@mixin item($bg-color) {
+  @include font-styles;
+  @include round-borders(#cbcaca, 15px, 2px);
+  margin: 3px;
+  margin-bottom: 5px;
+  margin-left: -25px;
+  width: 446px;
+  padding: 15px;
+  background-color: $bg-color;
+}
+
+h1 {
+  @include font-styles;
+  margin-top: -60px;
+}
+
+#place-holder {
+  
+}
+
+#new_item_name {
+  width: 360px;
+  margin: 10px 0px 0px 6px;
+}
+
+#new_item_add {
+  margin-top: 8px;
+  margin-left: 15px;
+  background: #dcf7dd;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.container {
+  margin-left: 450px;
+  margin-top: 100px;
+  padding: 10px;
+  width: 480px;
+  background-color: white;
+  @include round-borders(#cbcaca, 15px, 2px);
+}
+
+body {
+	background-color: #cbcaca;
+}

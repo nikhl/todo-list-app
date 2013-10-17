@@ -1,0 +1,21 @@
+.completed {
+  @include item(#dcf7dd);
+}
+
+.not_completed {
+  @include item(#fadfdf);
+}
+
+.delete_btn {
+  float: right;
+  padding: 5px 10px;
+	border-radius: 10px;
+  margin-top: -40px;
+  color: brown;
+  &:hover { background-color: #fadfdf; }
+}
+
+.status {
+  margin-top: 5px;
+  margin-left: 15px;
+}

@@ -1,0 +1,6 @@
+<form id="new_item">
+	<input type="text" name="name" id="new_item_name">
+	<input type="submit" value="Add" id="new_item_add">
+</form>
+
+<ul id="items"></ul>

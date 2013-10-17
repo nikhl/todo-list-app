@@ -1,0 +1,12 @@
+<% if @item.get('completed'): %>
+<div class="completed">
+<% else: %>
+<div class="not_completed">
+<% end %>
+	<input type="checkbox" name="complete" data-id='<%= @item.get('id') %>' <%= 'checked' if @item.get('completed') %> >
+	<%= @item.get('name') %>
+	<div class="status">
+		<%= if @item.get('completed') then "(completed)" else "(incomplete)" %>
+	</div>
+	<a class='delete_btn' data-id='<%= @item.get('id') %>'> <i class="icon-remove icon-large"></i></a>
+</div>
