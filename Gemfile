@@ -16,8 +16,12 @@ gem 'jquery-rails'
 
 gem 'rspec-rails', groups: [:test, :development]
 
+gem 'capybara', '~> 2.0.3'
+
 group :test do
 	gem 'factory_girl_rails'
+	gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 gem 'backbone-on-rails'

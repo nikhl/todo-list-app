@@ -6,6 +6,20 @@
   @include item(#fadfdf);
 }
 
+#new_item_name {
+  width: 360px;
+  margin: 10px 0px 0px 6px;
+}
+
+#new_item_add {
+  margin-top: 8px;
+  margin-left: 15px;
+  background: #dcf7dd;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 .delete_btn {
   float: right;
   padding: 5px 10px;

@@ -23,17 +23,14 @@ class TodoList.Views.ItemsIndex extends Backbone.View
 		view = new TodoList.Views.Item(model: item)
 		_itemViews[item.get('id')] = view
 		$('#items').append(view.render().el)
+		$('#new_item_name').focus()
 
 	createItem: (event) ->
 		event.preventDefault()
 		attrs = name: $('#new_item_name').val()
 		@collection.create attrs,
-			success: @clearItemName
 			wait: true
 			error: @handleError
-
-	clearItemName: ->
-		$('#new_item')[0].reset()
 
 	handleError: (item, response) ->
 		if response.status == 422
@@ -49,5 +46,4 @@ class TodoList.Views.ItemsIndex extends Backbone.View
 
 	toggleCompleted: (event) ->
 		item = @collection.get($(event.currentTarget).data('id'))
-		item.set 'completed': event.currentTarget.checked
-		item.save()
+		item.toggleComplete(event.currentTarget.checked)
